@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class AppTheme {
   //primary color
-  static const Color primary = Colors.green;
+  static const Color primary = Colors.orange;
 
   static final ThemeData lightTheme = ThemeData.light().copyWith(
     primaryColor: primary,
@@ -25,7 +25,7 @@ class AppTheme {
       backgroundColor: primary
     ),
 
-    //ElevatedButton
+    //ElevatedButton Theme
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
         backgroundColor: primary,
@@ -33,5 +33,29 @@ class AppTheme {
         elevation: 0 
       )
     ),
+
+    //Input Theme
+    inputDecorationTheme: const InputDecorationTheme(
+      floatingLabelStyle: TextStyle(color: primary),
+      enabledBorder: OutlineInputBorder(
+        borderSide: BorderSide(color: primary),
+        borderRadius: BorderRadius.only(
+          bottomLeft: Radius.circular(10),
+        ),
+      ),
+      focusedBorder: OutlineInputBorder(
+        borderSide: BorderSide(color: primary),
+        borderRadius: BorderRadius.only(
+          bottomLeft: Radius.circular(10),
+        ),
+      ),
+    ),
+
+    //Slider Theme
+    sliderTheme: const SliderThemeData(
+      activeTrackColor: primary,
+      thumbColor: primary
+    ),
+
   );
 }
